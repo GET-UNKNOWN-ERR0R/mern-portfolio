@@ -1,0 +1,98 @@
+.about-section{
+  padding:clamp(70px,9vw,110px) 0 10px;
+  background:linear-gradient(to right,#0c0c0c,#151515);
+  color:#fff
+}
+
+.about-container{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:clamp(24px,5vw,60px);
+  align-items:center
+}
+
+.about-title{
+  font-size:clamp(22px,4vw,40px);
+  line-height:1.25;
+  margin-bottom:18px
+}
+
+.about-title span{
+  color:#a855f7;
+  animation:glowPulse 2.5s ease-in-out infinite
+}
+
+@keyframes glowPulse{
+  0%,100%{text-shadow:0 0 8px rgba(168,85,247,.3)}
+  50%{text-shadow:0 0 22px rgba(168,85,247,.9)}
+}
+
+.about-text{
+  font-size:clamp(13px,1.6vw,16px);
+  line-height:1.7;
+  color:#cfcfcf;
+  margin-bottom:14px;
+  max-width:520px
+}
+
+.about-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:26px
+}
+
+.about-stats div{
+  min-width:110px;
+  padding:12px 16px;
+  text-align:center;
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  transition:.3s
+}
+
+.about-stats div:hover{box-shadow:0 0 40px rgba(168,85,247,.35)}
+
+.about-stats h3{font-size:clamp(16px,3vw,22px);color:#a855f7}
+.about-stats span{font-size:clamp(11px,1.4vw,13px);color:#aaa}
+
+.resume-btn{
+  display:inline-block;
+  margin-top:28px;
+  padding:12px 26px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#a855f7,#6d28d9);
+  color:#fff;
+  font-size:clamp(13px,1.6vw,15px);
+  text-decoration:none;
+  transition:.3s
+}
+
+.resume-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(168,85,247,.35)
+}
+
+.about-right{display:flex;justify-content:center}
+
+.image-ring{
+  width:clamp(160px,26vw,300px);
+  height:clamp(160px,26vw,300px);
+  border-radius:50%;
+  padding:6px;
+  background:linear-gradient(135deg,#a855f7,transparent)
+}
+
+.image-ring img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover
+}
+
+@media(max-width:1024px){
+  .about-container{grid-template-columns:1fr;text-align:center;gap:28px}
+  .about-right{order:-1;margin-top:10px}
+  .about-text{margin:0 auto;max-width:100%}
+  .about-stats{justify-content:center}
+}

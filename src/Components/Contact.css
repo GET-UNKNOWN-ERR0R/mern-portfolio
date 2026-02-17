@@ -1,0 +1,91 @@
+.contact-section{
+    padding:clamp(70px,10vw,110px) 8%;
+    padding-top:10px;
+    background:linear-gradient(to right,#0c0c0c,#151515);
+    color:#fff;
+  }
+  
+  .contact-wrapper{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:clamp(30px,6vw,60px);
+    align-items:center;
+  }
+  
+  .contact-info{display:grid;gap:22px}
+  
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:clamp(14px,2vw,16px);
+    color:#ddd;
+  }
+  .contact-item svg{color:#a855f7;font-size:18px}
+  
+  .contact-form{
+    padding:clamp(18px,3vw,26px);
+    border-radius:18px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 20px rgba(168,85,247,.15);
+    display:grid;
+    gap:16px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+    padding:12px 14px;
+    color:#fff;
+    font-size:14px;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder{color:#aaa}
+  
+  .contact-form button{
+    background:#a855f7;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    transition:transform .2s ease;
+  }
+  .contact-form button:active{transform:scale(.96)}
+  .contact-form button:focus{animation:sentEffect 2.5s ease forwards;outline:none}
+  
+  @keyframes sentEffect{
+    0%,70%{background:linear-gradient(135deg,#22c55e,#16a34a)}
+    100%{background:#a855f7}
+  }
+  
+  .contact-links{
+    margin-top:18px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .contact-links a{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 12px;
+    border-radius:8px;
+    background:rgba(255,255,255,.05);
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+  }
+  .contact-links a:hover{background:#a855f7;color:#fff}
+  
+  @media(max-width:900px){
+    .contact-wrapper{grid-template-columns:1fr}
+  }
+  
